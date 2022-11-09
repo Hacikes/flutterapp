@@ -19,12 +19,13 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.black87,
       ),
       body: Center(
-        // Получение локально изображения из папки assets, так же не забудь
-        // добавить эту папку в pubspec.yaml, если этого ещё не сделано
-        child: Image.asset('assets/pic-space.jpg'),
-        //Получение изображения по url
-        //child: Image.network('https://images.unsplash.com/photo-1667827576128-374c6ab46ee2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'),
+        child: Icon(
+          Icons.airport_shuttle,
+          color: Colors.lightGreen,
+          size: 50.0,
         ),
+
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
         backgroundColor: Colors.black87,
