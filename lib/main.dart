@@ -15,25 +15,20 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Alpha'),
+        title: Text('Alpha'),
         backgroundColor: Colors.black87,
       ),
-      body: const Center(
-        child: Text(
-          'hello',
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
-            color: Colors.grey,
-            fontFamily: 'PoppinsExtraBold',
-          ),
+      body: Center(
+        // Получение локально изображения из папки assets, так же не забудь
+        // добавить эту папку в pubspec.yaml, если этого ещё не сделано
+        child: Image.asset('assets/pic-space.jpg'),
+        //Получение изображения по url
+        //child: Image.network('https://images.unsplash.com/photo-1667827576128-374c6ab46ee2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'),
         ),
-      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
         backgroundColor: Colors.black87,
-        child: const Text('click me'),
+        child: Text('click me'),
       ),
     );
   }
