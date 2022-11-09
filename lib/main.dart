@@ -17,15 +17,28 @@ class Home extends StatelessWidget {
         title: const Text('Alpha'),
         backgroundColor: Colors.black87,
       ),
-      // В теле свойство Container. с этим свойством мы можем изменять
-      // вид того, что находится в контейнере
-      body: Container(
-        // Размер контейнера. EdgeInsets и та функция которая нужна
-        padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
-        // Отступ соответсвенно
-        margin: EdgeInsets.all(30.0),
-        color: Colors.grey[400],
-        child: Text('hello'),
+      body: Row(
+        // Выравнивание по x. spaceEvenly - выравнивает и оставляет отступы между виджетами
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        // Выравнивание по y. end - устанавливает в конце
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: <Widget>[
+          const Text('Делаем несколько виджетов'),
+          TextButton(
+            onPressed: () {},
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.amber,
+            ),
+            // Изменяет цвет текста у кнопки. ЕЕЕ БОЙ
+            child: const Text('click me', style: TextStyle(color: Colors.white),),
+            ),
+          Container(
+            color: Colors.green,
+            //margin: EdgeInsets.fromLTRB(5, 100, 10, 50),
+            padding: EdgeInsets.fromLTRB(10, 10, 10, 20),
+            child: Text('Contatinet'),
+          )
+        ],
       ),
 
       floatingActionButton: FloatingActionButton(
