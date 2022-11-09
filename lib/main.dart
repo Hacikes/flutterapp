@@ -10,26 +10,56 @@ void main() => runApp(const MaterialApp(
 // и + к этому не надо каждый раз тыкать Hot Reload
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Alpha'),
+        title: const Text('Alpha'),
         backgroundColor: Colors.black87,
       ),
       body: Center(
-        child: Icon(
-          Icons.airport_shuttle,
-          color: Colors.lightGreen,
-          size: 50.0,
+        // Кнопки по другому не задаются
+        // В Child принимаются параметры: Row и Column
+         child: Column(
+           children: [
+             // Можно задать Expended за место Container, чтобы кнопки было по всей ширене
+             Container(
+               // Задаём кнопки
+               child: (ElevatedButton(
+                 onPressed: () {
+                   print('Хорош');
+                 },
+                 child: const Text('button1'),
+                 )
+               ),
+             ),
+             Container(
+               // Задаём кнопки
+               child: (OutlinedButton(
+                 onPressed: () {
+                   print('Мегахорош');
+                 },
+                 child: const Text('button2'),
+               )
+               ),
+             ),
+             Container(
+               // Задаём кнопки
+               child: (TextButton(
+                 onPressed: () {
+                   print('Отсановись');
+                 },
+                 child: const Text('button3'),
+               )
+               ),
+             ),
+           ],
         ),
-
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
         backgroundColor: Colors.black87,
-        child: Text('click me'),
+        child: const Text('click me'),
       ),
     );
   }
