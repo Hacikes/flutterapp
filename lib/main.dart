@@ -17,26 +17,30 @@ class Home extends StatelessWidget {
         title: const Text('Alpha'),
         backgroundColor: Colors.black87,
       ),
-      body: Row(
-        // Выравнивание по x. spaceEvenly - выравнивает и оставляет отступы между виджетами
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        // Выравнивание по y. end - устанавливает в конце
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
-          const Text('Делаем несколько виджетов'),
-          TextButton(
-            onPressed: () {},
-            style: TextButton.styleFrom(
-              backgroundColor: Colors.amber,
-            ),
-            // Изменяет цвет текста у кнопки. ЕЕЕ БОЙ
-            child: const Text('click me', style: TextStyle(color: Colors.white),),
-            ),
+          Row(
+            children: <Widget>[
+              Text("hello"),
+              Text("World")
+            ],
+          ),
           Container(
+            padding: EdgeInsets.all(20.0),
             color: Colors.green,
-            //margin: EdgeInsets.fromLTRB(5, 100, 10, 50),
-            padding: EdgeInsets.fromLTRB(10, 10, 10, 20),
-            child: Text('Contatinet'),
+            child: Text('one'),
+          ),
+          Container(
+            padding: EdgeInsets.all(30.0),
+            color: Colors.yellow,
+            child: Text('two'),
+          ),
+          Container(
+            padding: EdgeInsets.all(40.0),
+            color: Colors.blue,
+            child: Text('three'),
           )
         ],
       ),
@@ -44,7 +48,7 @@ class Home extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
         backgroundColor: Colors.black87,
-        child: const Text('click me'),
+        child: const Text('click'),
       ),
     );
   }
