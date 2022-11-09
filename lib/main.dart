@@ -24,32 +24,29 @@ class Home extends StatelessWidget {
            children: [
              // Можно задать Expended за место Container, чтобы кнопки было по всей ширене
              Container(
-               // Задаём кнопки
-               child: (ElevatedButton(
-                 onPressed: () {
-                   print('Хорош');
-                 },
-                 child: const Text('button1'),
+               // Задаём кнопку
+               child: (ElevatedButton.icon(
+                 onPressed: () {},
+                 style: ElevatedButton.styleFrom(
+                   backgroundColor: Colors.blueAccent,
+                 ),
+                 //Добавление иконки
+                 icon: const Icon(
+                   Icons.mail
+                 ),
+                 // Добавление Label
+                 label: const Text('mail me'),
                  )
                ),
              ),
              Container(
-               // Задаём кнопки
-               child: (OutlinedButton(
-                 onPressed: () {
-                   print('Мегахорош');
-                 },
-                 child: const Text('button2'),
-               )
-               ),
-             ),
-             Container(
-               // Задаём кнопки
-               child: (TextButton(
-                 onPressed: () {
-                   print('Отсановись');
-                 },
-                 child: const Text('button3'),
+               // Задаём кнопку в виде иконки
+               child: (IconButton(
+                 onPressed: () {},
+                 //Добавление иконки
+                 icon: const Icon(
+                     Icons.mail
+                 ),
                )
                ),
              ),
