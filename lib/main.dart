@@ -17,42 +17,17 @@ class Home extends StatelessWidget {
         title: const Text('Alpha'),
         backgroundColor: Colors.black87,
       ),
-      body: Center(
-        // Кнопки по другому не задаются
-        // В Child принимаются параметры: Row и Column
-         child: Column(
-           children: [
-             // Можно задать Expended за место Container, чтобы кнопки было по всей ширене
-             Container(
-               // Задаём кнопку
-               child: (ElevatedButton.icon(
-                 onPressed: () {},
-                 style: ElevatedButton.styleFrom(
-                   backgroundColor: Colors.blueAccent,
-                 ),
-                 //Добавление иконки
-                 icon: const Icon(
-                   Icons.mail
-                 ),
-                 // Добавление Label
-                 label: const Text('mail me'),
-                 )
-               ),
-             ),
-             Container(
-               // Задаём кнопку в виде иконки
-               child: (IconButton(
-                 onPressed: () {},
-                 //Добавление иконки
-                 icon: const Icon(
-                     Icons.mail
-                 ),
-               )
-               ),
-             ),
-           ],
-        ),
+      // В теле свойство Container. с этим свойством мы можем изменять
+      // вид того, что находится в контейнере
+      body: Container(
+        // Размер контейнера. EdgeInsets и та функция которая нужна
+        padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+        // Отступ соответсвенно
+        margin: EdgeInsets.all(30.0),
+        color: Colors.grey[400],
+        child: Text('hello'),
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
         backgroundColor: Colors.black87,
