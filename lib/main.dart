@@ -23,31 +23,40 @@ class Home extends StatelessWidget {
         children: <Widget>[
           Row(
             children: <Widget>[
-              Text("hello"),
-              Text("World")
-            ],
-          ),
-          Center(
-            child: Container(
-              padding: EdgeInsets.all(20.0),
-              color: Colors.green,
-              child: Text('one'),
-            ),
-          ),
-          Row(
-            children: [
-              Container(
-                padding: EdgeInsets.all(30.0),
-                color: Colors.yellow,
-                child: Text('two'),
+              Expanded(
+                child: Image.asset('assets/pic-space.jpg'),
+                flex: 3,
+              ),
+              // Расширенный виджет, он располагается на всю длину
+              Expanded(
+                // Flex позволяет задавать ширину виджета
+                // Значение 3 из 6 кусочков, по сути это доля
+                flex: 1,
+                child: Container(
+                  padding: EdgeInsets.all(30.0),
+                  color: Colors.cyan,
+                  child: Text('1'),
+                ),
+
+              ),
+              Expanded(
+                flex: 1,
+                child: Container(
+                  padding: EdgeInsets.all(30.0),
+                  color: Colors.red,
+                  child: Text('2'),
+                ),
+              ),
+              Expanded(
+                flex: 1,
+                child: Container(
+                  padding: EdgeInsets.all(30.0),
+                  color: Colors.amber,
+                  child: Text('3'),
+                ),
               ),
             ],
           ),
-          Container(
-            padding: EdgeInsets.all(40.0),
-            color: Colors.blue,
-            child: Text('three'),
-          )
         ],
       ),
 
